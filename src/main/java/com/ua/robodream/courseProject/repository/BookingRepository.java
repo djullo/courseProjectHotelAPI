@@ -5,10 +5,12 @@
     import org.springframework.stereotype.Component;
     import org.springframework.stereotype.Repository;
 
-    import java.util.Optional;
+    import java.time.LocalDateTime;
+    import java.util.List;
 
     @Component
     @Repository
     public interface BookingRepository extends JpaRepository<Booking, Long> {
 
+        List<Booking> findByEndTimeBeforeAndRoomAvailableFalse(LocalDateTime currentDateTime);
     }

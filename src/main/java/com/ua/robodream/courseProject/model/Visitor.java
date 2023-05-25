@@ -21,6 +21,9 @@ public class Visitor {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "lastName")
+    private String lastName;
+
     @Column(name = "passport_number")
     private String passportNumber;
 

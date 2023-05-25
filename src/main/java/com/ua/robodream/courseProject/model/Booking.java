@@ -5,6 +5,7 @@
     import lombok.Getter;
     import lombok.NoArgsConstructor;
     import lombok.Setter;
+    import java.time.LocalDateTime;
 
     import java.util.Date;
 
@@ -31,4 +32,11 @@
 
         @Column(name = "check_out_date")
         private Date checkOutDate;
+
+        @Column(name = "end_time")
+        private LocalDateTime endTime;
+
+        public long getDurationMinutes() {
+            return 60;
+        }
     }
